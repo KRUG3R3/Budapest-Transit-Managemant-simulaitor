@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang='hu'><head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>BTM V0.0.3 Alpha</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<div id="menu"><div class="glass">
+<h1>Budapest Transit Manager</h1>
+<p>V0.0.3 Alpha</p>
+<input id="name" placeholder="Játékos neve">
+<button onclick="start()">Karrier indítása</button>
+<button onclick="saveSlot(1)">Mentés Slot 1</button>
+<button onclick="saveSlot(2)">Mentés Slot 2</button>
+<button onclick="saveSlot(3)">Mentés Slot 3</button>
+</div></div>
+
+<div id="game" style="display:none">
+<div id="hud">
+<span id="player"></span>
+<span id="money"></span>
+<span id="profit"></span>
+<span id="clock"></span>
+</div>
+
+<div id="left">
+<h3>BT Irányítóközpont</h3>
+<div id="events"></div>
+</div>
+
+<div id="right">
+<h3>Jármű</h3>
+<div id="vehicleInfo">Kattints egy járműre</div>
+</div>
+
+<div id="map"></div>
+</div>
+
+<div id="eventModal" class="modal">
+<div class="glass">
+<h2 id="eventTitle"></h2>
+<button onclick="resolveEvent('fast')">Gyors javítás (-5M)</button>
+<button onclick="resolveEvent('cheap')">Olcsó javítás (-1M, elégedettség -2)</button>
+</div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body></html>
